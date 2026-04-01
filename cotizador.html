@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomCarpintería | Carpintería</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cotizador.css">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">NOMCARPINTERÍA<span>.</span></a>
+            
+            <div class="menu-right">
+                <div class="menu-links">
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="materiales.html">Materiales</a>
+                </div>
+                <!-- <a href="cotizador.html" class="btn-outline">Cotizar Proyecto</a> -->
+                <button id="theme-toggle"><span>☀️</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container quote-page">
+        <header class="quote-header">
+            <h1>Configura tu Proyecto</h1>
+            <p>Define los detalles de tu pieza a medida y recibe un presupuesto aproximado.</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </header>
+
+        <section id="multi-step-form">
+            
+            <div class="form-step active" data-step="1">
+                <h2 class="step-title">1. ¿Qué vamos a crear?</h2>
+                <div class="visual-grid">
+                    <div class="selection-card" data-type="category" data-value="Cocina Integral">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=500" alt="Cocina">
+                        <div class="card-info"><h3>Cocina Integral</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Vestidor / Clóset">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=500" alt="Clóset">
+                        <div class="card-info"><h3>Vestidor</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Mueble a Medida">
+                        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=500" alt="Mueble">
+                        <div class="card-info"><h3>Mueble Especial</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <h2 class="step-title">2. Selección de Material</h2>
+                <div class="visual-grid">
+                    <div class="selection-card" data-type="material" data-value="Madera Sólida (Encino/Parota)">
+                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=500" alt="Madera">
+                        <div class="card-info"><h3>Madera Sólida</h3><p>Elegancia y durabilidad.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="material" data-value="MDF Enchapado">
+                        <img src="https://images.unsplash.com/photo-1610527003928-47ca504fa272?q=80&w=500" alt="MDF">
+                        <div class="card-info"><h3>Enchapado Fino</h3><p>Estabilidad y precisión.</p></div>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn-text" onclick="prevStep()">Anterior</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <h2 class="step-title">3. Dimensiones Estimadas</h2>
+                <div class="inputs-container">
+                    <div class="input-group">
+                        <label>Largo (cm)</label>
+                        <input type="number" id="input-length" placeholder="Ej. 240">
+                    </div>
+                    <div class="input-group">
+                        <label>Alto (cm)</label>
+                        <input type="number" id="input-height" placeholder="Ej. 90">
+                    </div>
+                    <div class="input-group">
+                        <label>Profundidad (cm)</label>
+                        <input type="number" id="input-depth" placeholder="Ej. 60">
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn-text" onclick="prevStep()">Anterior</button>
+                    <button class="btn-fill" onclick="nextStep()">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <h2 class="step-title">4. Tu Proyecto</h2>
+                <div id="summary-box" class="summary-box">
+                    </div>
+                <div class="step-actions">
+                    <button class="btn-text" onclick="prevStep()">Anterior</button>
+                    <button class="btn-whatsapp" onclick="sendWhatsApp()">Enviar a WhatsApp</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/ui.js"></script>
+    <script src="js/cotizador.js"></script>
+</body>
+</html>

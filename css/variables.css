@@ -1,0 +1,19 @@
+:root {
+    --bg-color: #fcfcf9;
+    --bg-secondary: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --accent: #7d5a50;
+    --border: rgba(0,0,0,0.08);
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border: rgba(255,255,255,0.1);
+}
