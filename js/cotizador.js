@@ -70,19 +70,19 @@ function changeStep(step) {
 function renderSummary() {
     const box = document.getElementById('summary-box');
     box.innerHTML = `
-        <p><strong>Tipo de Proyecto:</strong> ${projectData.category}</p>
-        <p><strong>Material:</strong> ${projectData.material}</p>
+        <p><strong>Forma de la Cocina:</strong> ${projectData.category}</p>
+        <p><strong>Color de la Cocina:</strong> ${projectData.color}</p>
         <p><strong>Medidas:</strong> ${projectData.dimensions.l}x${projectData.dimensions.h}x${projectData.dimensions.d} cm</p>
-        <p style="margin-top:1rem; color:var(--accent); font-style:italic;">Haga clic en el botón de abajo para enviar estos detalles al taller y recibir costo exacto.</p>
+        <p style="margin-top:1rem; color:var(--accent); font-style:italic;">Haga clic en el botón de abajo para enviar estos detalles al taller y recibir costo aproximado.</p>
     `;
 }
 
 // 4. Envío a WhatsApp
 function sendWhatsApp() {
-    const phone = "521XXXXXXXXXX"; // Reemplazar con el número real
+    const phone = "#"; // Reemplazar con el número real
     const text = `Hola! Me gustaría cotizar un proyecto:\n\n` +
                  `*Categoría:* ${projectData.category}\n` +
-                 `*Material:* ${projectData.material}\n` +
+                 `*Color:* ${projectData.color}\n` +
                  `*Dimensiones:* ${projectData.dimensions.l}cm largo x ${projectData.dimensions.h}cm alto x ${projectData.dimensions.d}cm fondo\n\n` +
                  `¿Podrían darme un costo aproximado? Gracias.`;
     

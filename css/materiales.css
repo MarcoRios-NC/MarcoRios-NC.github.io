@@ -83,41 +83,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* Footer Estilizado */
-.main-footer {
-    padding: 80px 0;
-    background: var(--bg-color);
-    border-top: 1px solid var(--border);
-    margin-top: 100px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
-}
-
-.footer-links h4, .footer-social h4 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.footer-links a {
-    display: block;
-    text-decoration: none;
-    color: var(--text-muted);
-    margin-bottom: 0.8rem;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--accent);
-}
-
 @media (max-width: 768px) {
     .material-card { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     .finish-grid { grid-template-columns: 1fr; }
 }

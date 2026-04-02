@@ -27,13 +27,6 @@ const proyectos = [
         categoria: "cocinas",
         imagen: "https://kuechenart.es/wp-content/uploads/cocinas-lineales.jpg",
         descripcion: "Ideal para espacios pequeños o estrechos."
-    },
-    {
-        id: 5,
-        titulo: "Cama Flotante Minimalista",
-        categoria: "dormitorios",
-        imagen: "https://images.unsplash.com/photo-1505693419148-de391ec39f58?q=80&w=800",
-        descripcion: "Estructura oculta en pino certificado."
     }
 ];
 
