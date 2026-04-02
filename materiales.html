@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <script>
+        // Bloque crítico: Ejecutar antes de que el CSS se renderice
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma Madera | Materiales</title>
+    <link rel="icon" href="ruta/icono.png" type="image/png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/materiales.css">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">REFORMA MADERA<span>.</span></a>
+            
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <span><i class="fa-solid fa-bars"></i></span>   <!-- ☰ -->
+            </button>
+
+            <div class="menu-right" id="menu-right">
+                <div class="menu-links">
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="materiales.html">Materiales</a>
+                </div>
+                <a href="cotizador.html" class="btn-outline">Cotizar Proyecto</a>
+                <button id="theme-toggle"><span class="theme-icon-container"><i class="fa-solid fa-sun"></i></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container materials-page">
+        <header class="section-header fade-in">
+            <span class="subtitle">Nobleza y Origen</span>
+            <h1>Nuestra Materia Prima</h1>
+            <p>Seleccionamos maderas con carácter, historia y sostenibilidad garantizada.</p>
+        </header>
+
+        <section class="material-group">
+            <h2 class="group-title">Maderas Nobles</h2>
+            <div class="materials-grid">
+                
+                <div class="material-card">
+                    <div class="mat-image">
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600" alt="Madera de Nogal">
+                    </div>
+                    <div class="mat-info">
+                        <h3>Nogal Americano</h3>
+                        <p>De tono café profundo y veta elegante. Es la cima del lujo en mobiliario contemporáneo.</p>
+                        <ul class="specs">
+                            <li><strong>Dureza:</strong> Alta</li>
+                            <li><strong>Uso:</strong> Muebles de autor, detalles premium.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="mat-image">
+                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=600" alt="Encino Blanco">
+                    </div>
+                    <div class="mat-info">
+                        <h3>Encino Blanco</h3>
+                        <p>Resistente y de veta abierta. Ideal para ambientes de minimalismo cálido y escandinavo.</p>
+                        <ul class="specs">
+                            <li><strong>Dureza:</strong> Muy Alta</li>
+                            <li><strong>Uso:</strong> Cocinas, suelos, comedores.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="finish-section fade-in">
+            <div class="finish-content">
+                <h2>Acabados que Protegen</h2>
+                <p>No ocultamos la madera, la celebramos. Usamos aceites naturales y lacas base agua de bajo impacto ambiental.</p>
+                <div class="finish-grid">
+                    <div class="finish-item">
+                        <h4>Mate Natural</h4>
+                        <p>Resalta la textura real sin brillos artificiales.</p>
+                    </div>
+                    <div class="finish-item">
+                        <h4>Aceite de Linaza</h4>
+                        <p>Nutre la fibra desde dentro para un tacto orgánico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">REFORMA MADERA</div>
+                <p>Carpintería de alta gama.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Contacto</h4>
+                <span class="social-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a class="social-link" href="https://wa.me/#">Contactanos</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a class="social-link" href="https://www.instagram.com/reforma.madera">@reforma.madera</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a class="social-link" href="#">@reforma.madera</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <script>
+        // Bloque crítico: Ejecutar antes de que el CSS se renderice
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma Madera | Cotizacion</title>
+    <link rel="icon" href="ruta/icono.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cotizador.css">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">REFORMA MADERA<span>.</span></a>
+            
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <span><i class="fa-solid fa-bars"></i></span>   <!-- ☰ -->
+            </button>
+
+            <div class="menu-right" id="menu-right">
+                <div class="menu-links">
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="materiales.html">Materiales</a>
+                </div>
+                <a href="cotizador.html" class="btn-outline">Cotizar Proyecto</a>
+                <button id="theme-toggle"><span class="theme-icon-container"><i class="fa-solid fa-sun"></i></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container quote-page">
+        <header class="quote-header">
+            <h1>Configura tu Proyecto</h1>
+            <p>Define los detalles de tu pieza a medida y recibe un presupuesto aproximado.</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </header>
+
+        <section id="multi-step-form">
+            
+            <div class="form-step active" data-step="1">
+                <h2 class="step-title">1. ¿Que forma de cocina prefieres?</h2>
+                <div class="visual-grid">
+                    <div class="selection-card" data-type="category" data-value="Cocina en L">
+                        <img src="assets/images/CocinaEnL.png" alt="Cocina en L">
+                        <div class="card-info"><h3>Cocina en L</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Cocina en U">
+                        <img src="assets/images/CocinaEnU.png" alt="Cocina en U">
+                        <div class="card-info"><h3>Cocina en U</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Cocina Lineal">
+                        <img src="assets/images/CocinaLineal.png" alt="Cocina Lineal">
+                        <div class="card-info"><h3>Cocina Lineal</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Cocina con ">
+                        <img src="assets/images/CocinaConIsla.png" alt="Cocina con isla">
+                        <div class="card-info"><h3>Cocina con </h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Cocina con peninsula">
+                        <img src="assets/images/CocinaConPeninsula.png" alt="Cocina con peninsula">
+                        <div class="card-info"><h3>Cocina con peninsula</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Cocina Paralela">
+                        <img src="assets/images/CocinaParalela.png" alt="Cocina Paralela">
+                        <div class="card-info"><h3>Cocina Paralela</h3></div>
+                    </div>
+                    <div class="selection-card" data-type="category" data-value="Otro">
+                        <img src="assets/images/CocinaOtraOpcion.png" alt="Otra opcion">
+                        <div class="card-info"><h3>Otro</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <h2 class="step-title">2. ¿Que colores prefieres para tu cocina?</h2>
+                <div class="visual-grid">
+                    <div class="selection-card" data-type="color" data-value="Color Sólido">
+                        <img src="https://plus.unsplash.com/premium_photo-1747932197569-fbd93854dc58?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lisos">
+                        <div class="card-info"><h3>Color Sólido</h3><p>Aspecto limpio y sensacion de mayor espacio.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="color" data-value="Lisos con amaderado">
+                        <img src="https://images.unsplash.com/photo-1737233463795-34fccdfc67bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVlYmxlcyUyMGRlJTIwY29jaW5hJTIwY29sb3IlMjBzb2xpZG8lMjB5JTIwTWFkZXJhfGVufDB8fDB8fHww" alt="Liso y amaderado">
+                        <div class="card-info"><h3>Lisos con amaderado</h3><p>Combina calidez con modernidad y evita que se vea plana.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="color" data-value="Amaderados">
+                        <img src="https://images.unsplash.com/photo-1721743170649-dcdcdc889b1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVlYmxlcyUyMGRlJTIwY29jaW5hJTIwY29uJTIwTWFkZXJhfGVufDB8fDB8fHww" alt="Amaderado">
+                        <div class="card-info"><h3>Amaderados</h3><p>Aporta una sensación natural, acogedora y hogareña.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="color" data-value="Alto brillo">
+                        <img src="https://plus.unsplash.com/premium_photo-1661962614351-1ce211d9eeb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVlYmxlcyUyMGRlJTIwY29jaW5hJTIwZGUlMjBhbHRvJTIwYnJpbGxvfGVufDB8fDB8fHww" alt="Alto brillo">
+                        <div class="card-info"><h3>Alto brillo</h3><p>Estabilidad y precisión.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="color" data-value="Mate antihuella">
+                        <img src="https://cdn.cocinaintegral.net/cocinaintegral/2022/01/Silk-magama.jpg" alt="Mate antihuella">
+                        <div class="card-info"><h3>Mate antihuella</h3><p>Elegancia y durabilidad.</p></div>
+                    </div>
+                    <div class="selection-card" data-type="color" data-value="Otro">
+                        <img src="https://i.pinimg.com/originals/5b/34/10/5b34108f3d09c67ad550c357436d28b9.jpg" alt="Otro">
+                        <div class="card-info"><h3>Otro</h3><p>Mas libertad para el color de tu cocina.</p></div>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn-before" onclick="prevStep()">Anterior</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <h2 class="step-title">3. ¿Que medidas tendra tu cocina?</h2>
+
+                <div class="inputs-container">
+                    <div class="input-group">
+                        <label>Pared 1 donde ira la tarja (cm)</label>
+                        <input type="number" id="input-length" placeholder="Ej. 320" multiple="True">
+                    </div>
+                    <div class="input-group">
+                        <label>Pared 2, ancho del espacio (cm)</label>
+                        <input type="number" id="input-height" placeholder="Ej. 300">
+                    </div>
+                    <div class="input-group">
+                        <label>Alto del espacio (cm)</label>
+                        <input type="number" id="input-depth" placeholder="Ej. 240">
+                    </div>
+                </div>
+
+                <div class="dimensions-guide-container">
+                    <h3 class="dimension-instructions">Utilize la siguiente imagen como guia.</h3>
+                    <img class="dimensions-img" src="assets/images/dimensionesDeCuarto.jpg" alt="Imagen guia">
+                </div>
+
+                <div class="step-actions">
+                    <button class="btn-before" onclick="prevStep()">Anterior</button>
+                    <button class="btn-next" onclick="nextStep()">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <h2 class="step-title">4. Tu Proyecto</h2>
+                <div id="summary-box" class="summary-box">
+                    </div>
+                <div class="step-actions">
+                    <button class="btn-before" onclick="prevStep()">Anterior</button>
+                    <button class="btn-whatsapp" onclick="sendWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Enviar a WhatsApp</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">REFORMA MADERA</div>
+                <p>Carpintería de alta gama.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Contacto</h4>
+                <span class="social-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a class="social-link" href="https://wa.me/#">Contactanos</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a class="social-link" href="https://www.instagram.com/reforma.madera">@reforma.madera</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a class="social-link" href="#">@reforma.madera</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/ui.js"></script>
+    <script src="js/cotizador.js"></script>
+</body>
+</html>

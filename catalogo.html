@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <script>
+        // Bloque crítico: Ejecutar antes de que el CSS se renderice
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma Madera | Catalogo</title>
+    <link rel="icon" href="ruta/icono.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">REFORMA MADERA<span>.</span></a>
+            
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <span><i class="fa-solid fa-bars"></i></span>   <!-- ☰ -->
+            </button>
+
+            <div class="menu-right" id="menu-right">
+                <div class="menu-links">
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="materiales.html">Materiales</a>
+                </div>
+                <a href="cotizador.html" class="btn-outline">Cotizar Proyecto</a>
+                <button id="theme-toggle"><span class="theme-icon-container"><i class="fa-solid fa-sun"></i></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container catalog-page">
+        <header class="catalog-header fade-in">
+            <span class="subtitle">Portafolio</span>
+            <h1>Proyectos Seleccionados</h1>
+            <p>Una mirada a nuestra dedicación por el detalle y la excelencia en madera.</p>
+        </header>
+
+        <div class="filter-bar fade-in">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="cocinas">Cocinas</button>
+            <button class="filter-btn" data-filter="dormitorios">Dormitorios</button>
+            <button class="filter-btn" data-filter="muebles">Muebles Especiales</button>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid">
+            </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">REFORMA MADERA</div>
+                <p>Carpintería de alta gama.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Contacto</h4>
+                <span class="social-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a class="social-link" href="https://wa.me/#">Contactanos</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a class="social-link" href="https://www.instagram.com/reforma.madera">@reforma.madera</a>
+                </span>
+                <span class="social-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a class="social-link" href="#">@reforma.madera</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/ui.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
