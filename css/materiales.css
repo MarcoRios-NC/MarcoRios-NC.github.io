@@ -1,10 +1,10 @@
 .materials-page {
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding-top: 8.75em;
+    padding-bottom: 5em;
 }
 
 .section-header {
-    max-width: 700px;
+    max-width: 43.75em;
     margin-bottom: 5rem;
 }
 
@@ -12,18 +12,18 @@
     font-family: var(--font-sans);
     text-transform: uppercase;
     font-size: 0.8rem;
-    letter-spacing: 3px;
+    letter-spacing: 0.1875em;
     color: var(--accent);
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 0.0625em solid var(--border);
     padding-bottom: 1rem;
 }
 
 .materials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 4rem;
-    margin-bottom: 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75em), 1fr)); 
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 .material-card {
@@ -31,13 +31,19 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mat-image {
+    width: 100%;
 }
 
 .mat-image img {
     width: 100%;
-    aspect-ratio: 1;
+    height: auto;
+    display: block;
     object-fit: cover;
-    filter: sepia(20%); /* Toque cálido */
 }
 
 .mat-info h3 {
@@ -49,7 +55,7 @@
     list-style: none;
     margin-top: 1.5rem;
     font-size: 0.85rem;
-    border-top: 1px solid var(--border);
+    border-top: 0.0625em solid var(--border);
     padding-top: 1rem;
 }
 
@@ -67,7 +73,7 @@
 }
 
 .finish-content {
-    max-width: 800px;
+    max-width: 50em;
 }
 
 .finish-grid {
@@ -83,7 +89,27 @@
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-    .material-card { grid-template-columns: 1fr; }
-    .finish-grid { grid-template-columns: 1fr; }
+@media (max-width: 48em) {
+    .materials-page {
+        padding-top: 6.25em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .material-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .mat-image img {
+        aspect-ratio: 16/9;
+    }
+
+    .finish-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .finish-grid {
+        grid-template-columns: 1fr;
+    }
 }

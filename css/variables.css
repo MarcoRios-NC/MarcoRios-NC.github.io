@@ -32,9 +32,9 @@
 }
 
 [data-theme="light"] .hero h1 {
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0.125em 0.625em rgba(255, 255, 255, 0.5);
 }
 
 [data-theme="dark"] .hero h1 {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0.125em 0.625em rgba(0, 0, 0, 0.5);
 }

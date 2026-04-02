@@ -1,6 +1,6 @@
 .quote-page {
-    padding-top: 120px;
-    max-width: 900px !important;
+    padding-top: 7.5em;
+    max-width: 56.25em !important;
 }
 
 .quote-header {
@@ -11,10 +11,10 @@
 /* Progress Bar */
 .progress-container {
     width: 100%;
-    height: 4px;
+    height: 0.25em;
     background: var(--border);
     margin-top: 2rem;
-    border-radius: 10px;
+    border-radius: 0.625em;
     overflow: hidden;
 }
 
@@ -67,8 +67,8 @@
 
 .selection-card {
     background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    border: 0.0625em solid var(--border);
+    border-radius: 0.25em;
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition);
@@ -80,7 +80,7 @@
 
 .selection-card img {
     width: 100%;
-    height: 180px;
+    height: 11.25em;
     object-fit: fill;
     transition: var(--transition);
 }
@@ -91,7 +91,7 @@
 
 .selection-card.selected {
     border-color: var(--accent);
-    box-shadow: 0 0 0 1px var(--accent);
+    box-shadow: 0 0 0 0.0625em var(--accent);
 }
 
 .card-info {
@@ -115,14 +115,14 @@
     gap: 1rem;
     background: var(--bg-secondary);
     padding: 2.5rem;
-    border: 1px solid var(--border);
+    border: 0.0625em solid var(--border);
 }
 
 .input-group label {
     display: block;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     margin-bottom: 0.5rem;
 }
 
@@ -131,7 +131,7 @@
     box-sizing: border-box;
     padding: 1rem;
     background: var(--bg-color);
-    border: 1px solid var(--border);
+    border: 0.0625em solid var(--border);
     color: var(--text-main);
     font-size: 1.1rem;
 }
@@ -140,15 +140,15 @@
 .summary-box {
     background: var(--bg-secondary);
     padding: 2rem;
-    border-left: 4px solid var(--accent);
+    border-left: 0.25em solid var(--accent);
     line-height: 2;
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(0.625em); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
     .inputs-container { grid-template-columns: 1fr; }
 }
