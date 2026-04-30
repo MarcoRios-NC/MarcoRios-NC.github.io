@@ -106,9 +106,9 @@
     color: var(--accent);
 }
 
-.btn-whatsapp {
-    background: #25D366;
-    color: white;
+.btn-mail {
+    background: #2563EB;
+    color: #FFFFFF  ;
     border: none;
     padding: 1.2rem 2rem;
     width: 100%;
@@ -116,11 +116,12 @@
     font-weight: 500;
     cursor: pointer;
     margin-top: 1rem;
-    gap: 0.3em
+    gap: 0.3em;
+    border-radius: 0.6em; 
 }
 
-.btn-whatsapp:hover {
-    filter: opacity(0.6); /* Un tono más oscuro de madera */
+.btn-mail:hover {
+    background-color: #1D4ED8;
     transform: translateY(-0.125em);
     box-shadow: 0 0.625em 1.25em rgba(0,0,0,0.1);
 }
