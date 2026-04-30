@@ -82,13 +82,17 @@ function renderSummary() {
 // 4. Envío al correo
 function sendEmail() {
     const emailTo = "theEmail@example.com";
-    const title = `Cotizacion de ${projectData.category}`
+    const title = `Cotización de ${projectData.category}`;
+    
+    // Usamos saltos de línea \n normales aquí
     const text = `Hola! Me gustaría cotizar un proyecto:\n\n` +
-                 `*Categoría:* ${projectData.category}\n` +
-                 `*Color:* ${projectData.color}\n` +
-                 `*Dimensiones:* ${projectData.dimensions.l}cm largo x ${projectData.dimensions.h}cm alto x ${projectData.dimensions.d}cm fondo\n\n` +
+                 `CATEGORÍA: ${projectData.category}\n` +
+                 `COLOR: ${projectData.color}\n` +
+                 `DIMENSIONES: ${projectData.dimensions.l}cm largo x ${projectData.dimensions.h}cm alto x ${projectData.dimensions.d}cm fondo\n\n` +
                  `¿Podrían darme un costo aproximado? Gracias.`;
 
-    const mailtoLink = `mailto:${emailTo}?subject=${title}&body=${text}`;
+    // Es vital aplicar encodeURIComponent a los parámetros
+    const mailtoLink = `mailto:${emailTo}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(text)}`;
+    
     window.open(mailtoLink, '_self');
 }
