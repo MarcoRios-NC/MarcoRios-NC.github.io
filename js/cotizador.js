@@ -73,18 +73,22 @@ function renderSummary() {
         <p><strong>Forma de la Cocina:</strong> ${projectData.category}</p>
         <p><strong>Color de la Cocina:</strong> ${projectData.color}</p>
         <p><strong>Medidas:</strong> ${projectData.dimensions.l}x${projectData.dimensions.h}x${projectData.dimensions.d} cm</p>
-        <p style="margin-top:1rem; color:var(--accent); font-style:italic;">Haga clic en el botón de abajo para enviar estos detalles al taller y recibir costo aproximado.</p>
+        <mark style="background-color: #bcbcbc !important; color: var(--text-main); padding: 5px; font-style: italic; border-radius:0.4em">
+            Haga clic en el botón de abajo para enviar estos detalles al taller y recibir costo aproximado.
+        </mark>
     `;
 }
 
-// 4. Envío a WhatsApp
-function sendWhatsApp() {
-    const phone = "#"; // Reemplazar con el número real
+// 4. Envío al correo
+function sendEmail() {
+    const emailTo = "theEmail@example.com";
+    const title = `Cotizacion de ${projectData.category}`
     const text = `Hola! Me gustaría cotizar un proyecto:\n\n` +
                  `*Categoría:* ${projectData.category}\n` +
                  `*Color:* ${projectData.color}\n` +
                  `*Dimensiones:* ${projectData.dimensions.l}cm largo x ${projectData.dimensions.h}cm alto x ${projectData.dimensions.d}cm fondo\n\n` +
                  `¿Podrían darme un costo aproximado? Gracias.`;
-    
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
+
+    const mailtoLink = `mailto:${emailTo}?subject=${title}&body=${text}`;
+    window.open(mailtoLink, '_self');
 }
